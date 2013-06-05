@@ -1,9 +1,13 @@
+# TicTacToe
+
+
 p1m = []    # player 1 list of moves
 p2m = []    # player 2 list of moves 
 b = [0,1,2, # the board
      3,4,5,
      6,7,8]
 
+# TODO Replace check() helper method and checkWin() with list.containsAll(win)?
 def check(w, p):
     j = 0
     for i in w:
