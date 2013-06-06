@@ -52,7 +52,7 @@ while(True):
     p2 = int(raw_input("p2: "))
     if type(b[p2]) is type(0):
         b[p2] = "o"
-        p1m.append(p2)
+        p2m.append(p2)
 
 
     printBoard()
