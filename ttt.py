@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # TicTacToe
 
 
@@ -32,22 +34,27 @@ def printBoard():
     print b[3:6]
     print b[6:9]
 
+printBoard()
+
 # TODO play against the computer (random or AI, easy or hard)
 while(True):
 # TODO D.R.Y. 
-    printBoard()
 # basic game play logic
     p1 = int(raw_input("p1: "))
-    b[p1] = "x"
-    p1m.append(p1)
+    if type(b[p1]) is type(0):
+        b[p1] = "x"
+        p1m.append(p1)
+
     printBoard()
     if(checkWin(p1m)):
         print "\nPLAYER 1 WINS!"
         break
     p2 = int(raw_input("p2: "))
-    # TODO check if b[p2] is already a char
-    b[p2] = "o"
-    p1m.append(p2)
+    if type(b[p2]) is type(0):
+        b[p2] = "o"
+        p1m.append(p2)
+
+
     printBoard()
     if(checkWin(p2m)):
         print "\nPLAYER 2 WINS!"
