@@ -2,6 +2,7 @@
 
 # TicTacToe
 
+print "\nTIC TAC TOE\nenter -1 to exit\n"
 
 p1m = []    # player 1 list of moves
 p2m = []    # player 2 list of moves 
@@ -29,10 +30,15 @@ def checkWin(p):
     return False
 
 def printBoard():
-# TODO make this print prettier!
-    print b[0:3]
-    print b[3:6]
-    print b[6:9]
+    for p in b[0:3]:
+        print p," ",
+    print ""
+    for p in b[3:6]:
+        print p," ",
+    print ""
+    for p in b[6:9]:
+        print p," ",
+    print ""
 
 printBoard()
 
@@ -41,6 +47,8 @@ while(True):
 # TODO D.R.Y. 
 # basic game play logic
     p1 = int(raw_input("p1: "))
+    if p1 == -1:
+        break
     if type(b[p1]) is type(0):
         b[p1] = "x"
         p1m.append(p1)
@@ -50,10 +58,11 @@ while(True):
         print "\nPLAYER 1 WINS!"
         break
     p2 = int(raw_input("p2: "))
+    if p2 == -1:
+        break
     if type(b[p2]) is type(0):
         b[p2] = "o"
         p2m.append(p2)
-
 
     printBoard()
     if(checkWin(p2m)):
