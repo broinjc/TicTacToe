@@ -20,6 +20,8 @@ def check(w, p):
         return True
     else:
         return False
+
+
 def checkWin(p):
     wins = [[0,1,2],[3,4,5],[6,7,8],
             [0,3,6],[1,4,7],[2,5,8],
@@ -28,6 +30,7 @@ def checkWin(p):
         if(check(w,p)):
             return True
     return False
+
 
 def printBoard():
     for p in b[0:3]:
@@ -40,7 +43,9 @@ def printBoard():
         print p," ",
     print ""
 
+
 printBoard()
+
 
 # TODO play against the computer (random or AI, easy or hard)
 while(True):
